@@ -67,7 +67,7 @@ def surface_area_tin(dtm, resolution):
     a += _heronsa(dzx[2:, :-1], dzy[1:, 1:-1], dzb[1:, :-1])
     a += _heronsa(dzx[2:, 1:], dzy[1:, 1:-1], dzd[1:, 1:])
     a += _heronsa(dzx[1:-1, 1:], dzy[1:, 2:], dzd[1:, 1:])
-    return np.pad(a, 1, constant_values=np.nan) / resolution / resolution
+    return np.pad(a, 1, constant_values=np.nan)
 
 
 def surface_area_cos(dtm, resolution):
